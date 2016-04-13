@@ -100,24 +100,17 @@ namespace NadekoBot
             };
         }
 
-        private async Task SendUpdateToCarbon()
+        private void SendUpdateToCarbon()
         {
-            if (string.IsNullOrWhiteSpace(NadekoBot.Creds.CarbonKey))
-                return;
             try
             {
                 using (var client = new HttpClient())
                 {
-                    using (var content = new FormUrlEncodedContent(new Dictionary<string, string> {
+                    client.PostAsync("https://www.carbonitex.net/discord/data/botdata.php",
+                        new FormUrlEncodedContent(new Dictionary<string, string> {
                                 { "servercount", NadekoBot.Client.Servers.Count().ToString() },
                                 { "key", NadekoBot.Creds.CarbonKey }
-                    }))
-                    {
-                        content.Headers.Clear();
-                        content.Headers.Add("Content-Type", "application/x-www-form-urlencoded");
-
-                        var res = await client.PostAsync("https://www.carbonitex.net/discord/data/botdata.php", content);
-                    };
+                    }));
                 }
             }
             catch (Exception ex)

@@ -1,0 +1,42 @@
+{
+  "PermissionsControllerRole": "Nadeko",
+  "Verbose": true,
+  "Id": 98612455889981440,
+  "Permissions": {
+    "Name": "IWantThatButt",
+    "Modules": {
+      "NSFW": false,
+      "Music": true
+    },
+    "Commands": {
+      "!m2 q": true,
+      "!m2 n": true,
+      "!m2 d": true
+    },
+    "FilterInvites": false,
+    "FilterWords": false
+  },
+  "Words": [],
+  "UserPermissions": {},
+  "ChannelPermissions": {
+    "98612455889981440": {
+      "Name": "nsfw-chat",
+      "Modules": {},
+      "Commands": {
+        "!m2 half": false,
+        "!m2 rcs": false,
+        "!m2 min": false,
+        "!m2 save": false,
+        "!m2 max": false,
+        "!m2 dv": false,
+        "!m2 s": false,
+        "!m2 radio": false,
+        "!m2 vol": false,
+        "!m2 d": false
+      },
+      "FilterInvites": false,
+      "FilterWords": false
+    }
+  },
+  "RolePermissions": {}
+}
